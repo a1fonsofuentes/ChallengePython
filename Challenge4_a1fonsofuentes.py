@@ -2,7 +2,7 @@ import math
 print("Welcome to the Right Triangle Solver App.")
 first_leg = float(input("What is the first leg of the triangle: "))
 second_leg = float(input("What is the second leg of the triangle: "))
-hypotenuse = round(math.sqrt((first_leg**2) + (second_leg**2)), 4)
+hypotenuse = round(math.sqrt((first_leg**2) + (second_leg**2)), 4) #Uso math.sqrt para hacer la raiz cuadrada, importando antes math
 area = (first_leg*second_leg)/2
 
 print(f"""
