@@ -1,0 +1,6 @@
+name = input("What is your name? ")
+print(f"Hi {name}! I will be counting the amount of times a letter appears on a message.")
+message = (input("Please enter a message: ")).lower()
+letter = (input("Which letter do you want to count? ")).lower()
+count = message.count(letter)
+print(f"{name}, your message has {count}'s in it.")
