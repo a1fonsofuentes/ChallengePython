@@ -1,26 +1,41 @@
-print("Welcome to the Favorite Teachers Program ")
-first = input("Who is your first favorite teacher: \n ")
-print(f"{first}")
-second = input("Who is your second favorite teacher: \n ")
-print(f"{second}")
-third = input("Who is your third favorite teacher: \n ")
-print(f"{third}")
-fourth = input("Who is your fourth favorite teacher: \n ")
-print(f"{fourth}")
-lista_teachers=[first,second,third,fourth]
-print(f"{lista_teachers}")
-print(f"{sorted(lista_teachers)}")
-print(f"{sorted(lista_teachers ,reverse=True)}")
+def Favorite_teacher_program():
+    print("\tWelcome to the Favorite Teachers Program")
+    fav_teachers = []
 
-print(f"Your top two teachers are {lista_teachers[0,1]}")
-print(f"Your next two top teachers are {lista_teachers[2,3]}")
-print(f"Your last favourite teacher is {lista_teachers[3]}")
-print(f"{len(lista_teachers)}")
+    for i in range(1,5):
+        teacher = input(f"\tWho is your number {i} favorite teacher:\t")
+        fav_teachers.append(teacher)
+#Creamos la función arriba.
+#Creamos f prints junto con sorted para probarlo.
+    print(f"\nYour favorite teachers ranked are: {fav_teachers}")
+    print(f"Your favorite teachers alphabetically order are: {sorted(fav_teachers)}")
+    print(f"Your favorite teachers in reverse alphabetically order are: {sorted(fav_teachers, reverse=True)}")
+    print(f"Your top two teachers are: {fav_teachers[:2]}")
+    print(f"Your next two teachers are: {fav_teachers[2:4]}")
+    print(f"Your last favorite teacher is: {fav_teachers[len(fav_teachers)-1]}")
+    print(f"Your have a total of 4 favorite teachers.")
+    print(f"Oops, {fav_teachers[0]} is no longer your favorite teacher.")
 
-print(f"OOps {lista_teachers[0] } is no longer your favourit teacher . Who is your new favourite Teacher :")
-lista_teachers.insert(input(""))
-lista_teachers[1]= 
+    new_teacher  = input("\tWho is your new FAVORITE teacher:\t")
 
-x[1] = "r"
-x[2:] = ["s", "t"]
-x = ["a", "b", "c", "d"]
+    fav_teachers.insert(0,new_teacher)
+    print(f"\nYour top two teachers are: {fav_teachers[:2]}")
+    print(f"Your next two teachers are: {fav_teachers[2:4]}")
+    print(f"Your last favorite teacher is: {fav_teachers[len(fav_teachers)-1]}")
+    print(f"Your have a total of 5 favorite teachers.\n")
+
+    print(f"You've decided you no longer like a teacher.")
+
+    removed_teacher  = input("\tWhich teacher would you like to remove from your list:\t")
+
+    fav_teachers.remove(removed_teacher)
+    print(f"\nYour favorite teachers ranked are: {fav_teachers}")
+    print(f"Your favorite teachers alphabetically order are: {sorted(fav_teachers)}")
+    print(f"Your favorite teachers in reverse alphabetically order are: {sorted(fav_teachers, reverse=True)}")
+    print(f"Your top two teachers are: {fav_teachers[:2]}")
+    print(f"Your next two teachers are: {fav_teachers[2:4]}")
+    print(f"Your last favorite teacher is: {fav_teachers[len(fav_teachers)-1]}")
+    print(f"Your have a total of 4 favorite teachers.")
+
+#Ejecuto la función
+Favorite_teacher_program()
