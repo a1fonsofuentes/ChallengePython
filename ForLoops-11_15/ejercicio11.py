@@ -1,6 +1,7 @@
+#Imprime los mensajes de introduccion
 print("Welcome to the Binary/Hexadecimal Converter App")
 print("Compute binary and hexadecimal values up to de following decimal number: ")
-numero = int(input())
+numero = int(input("Enter a number: "))
 print(f"{numero}")
 print("Generating lists...Complete!")
 print("Using slices, we will now show a portion of each list.")
@@ -17,6 +18,7 @@ lista_numeros = range(1,numero)
 
 print(lista_numeros[decimal_start:decimal_stop])
 
+#Creamos listas vacías
 bin_lista = []
 hex_lista = []
 
@@ -26,7 +28,7 @@ for numero in lista_numeros:
 
 
 print(f"\tDecimal values from {decimal_start} to {decimal_stop} ")
-
+#for loops para ejecutar en las listas
 for i in range(decimal_start-1,decimal_stop):
     print(f"\t{lista_numeros[i]}")
 
@@ -34,11 +36,11 @@ for i in range(decimal_start-1,decimal_stop):
     print(f"\t{bin_lista[i]}")
 
 for i in range(decimal_start-1,decimal_stop):
-    print(f"\t{hex_lista[i]}")12
+    print(f"\t{hex_lista[i]}")
     
 
-print(f"Press enter to see al values from 1 to {numero}\n)
+print(f"Press enter to see al values from 1 to {numero}\n")
 
 espacio  = input("")
-if espacio = "\n"
+if espacio == "\n":
     print("")

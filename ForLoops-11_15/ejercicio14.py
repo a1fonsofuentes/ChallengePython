@@ -1,15 +1,29 @@
-n = int(input("Ingresa un numero :"))
-a = 0 
-b = 1
-sum = 0 
-count = 1
+# Creamos de la función
+def fibonacci_calculator_app():
+    print(f"\tWelcome to the Fibonacci Calculator App\n")
+    fibo = int(input(f"\tHow many digits of the Fibonacci Sequence would you like to compute:\t"))
+    print(f"\n\tThe first {fibo} numbers of the fibonacci sequence are:\n")
 
-while (count<= n):
-    print( sum,end = "")
-    # el comando end va a hacer print de la suma y terminar con un espacio.
-    # es un parametro de print.
-    count += 1
-    a = b
-    b = sum 
-    sum = a +b
+    fibo_nums = [1,1]
+    golden_ratio = []
+
+#Esto imprime la secuencia fibonacci
+    for i in range(1,fibo+1):
+        if i == 1 or i == 2:
+            print(f"\t{i} --> {fibo_nums[0]}")
+        else:
+            fibo_next = fibo_nums[len(fibo_nums)-1] + fibo_nums[len(fibo_nums)-2]
+            fibo_nums.append(fibo_next)
+
+            print(f"\t{i} --> {fibo_nums[len(fibo_nums)-1]}")
+
+    print(f"\n\tThe corresponding Golden Ratio values are:\n")
+#Imprime la secuencia de golden ratio
+    for i in range(0,fibo-1):
+        golden_next = fibo_nums[i+1] / fibo_nums[i]
+        golden_ratio.append(golden_next)
+        print(f"\t{i+1} --> {golden_ratio[len(golden_ratio)-1]}")
     
+    print(f"\n\tThe ratio of consecutive Fibonacci terms approaches Phi; 1.618\n")  
+#Se ejectua la función
+fibonacci_calculator_app()
