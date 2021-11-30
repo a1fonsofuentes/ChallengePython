@@ -1,14 +1,16 @@
-g1 = float(input("What is your first grade? (0-100): " ))
+g1 = float(input("What is your first grade? (0-100): " )) #Pedimos los inputs
 g2 = float(input("What is your second grade? (0-100): "))
 g3 = float(input("What is your third grade? (0-100): "))
 g4 = float(input("What is your fourth grade? (0-100): "))
-
+ 
+ #unimos todo a la lista vacía
 notas = []
 notas.append(g1)
 notas.append(g2)
 notas.append(g3)
 notas.append(g4)
 
+#printeamos los datos.
 print(f"Your grades are: {notas}")
 notas = sorted(notas, reverse = True)
 print(f"Your grades from highest to lowest are: {notas}")
